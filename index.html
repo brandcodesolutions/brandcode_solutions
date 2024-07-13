@@ -31,18 +31,51 @@
                 <a  class="navbar-brand">
                     <img src="img/logo.png" style="height: 50px ; width: 50x; max-height: 120px;" alt="">
                 </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <button onclick="toggleNavbarAlt()" type="button" class="navbar-toggler" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <script>
+                    function toggleNavbarAlt() {
+                        var navbarCollapse = document.getElementById('navbarCollapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarCollapse.classList.remove('show');
+                        } else {
+                            navbarCollapse.classList.add('show');
+                        }
+                    }
+                </script>
+
+                <script>
+                    document.getElementById('navbar-toggler').addEventListener('click', function() {
+                        var navbarCollapse = document.getElementById('navbarCollapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarCollapse.classList.remove('show');
+                        } else {
+                            navbarCollapse.classList.add('show');
+                        }
+                    });
+                    
+                    function toggleNavbar() {
+                        var navbarCollapse = document.getElementById('navbarCollapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarCollapse.classList.remove('show');
+                        }
+                    }
+                    
+                    if ($('.hero .hero-text h2').length == 1) {
+                        var typed_strings = $('.hero .hero-text .typed-text').text();
+                        $('.hero .hero-text h2').text(typed_strings);
+                    }
+                    </script>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">Sobre</a>
-                        <a href="#service" class="nav-item nav-link">Serviços</a>
-                        <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                        <a href="#price" class="nav-item nav-link">Investimento</a>
-                        <a href="#review" class="nav-item nav-link">Avaliações</a>
+                        <a href="#home" class="nav-item nav-link active" onclick="toggleNavbar()">Home</a>
+                        <a href="#about" class="nav-item nav-link" onclick="toggleNavbar()">Sobre</a>
+                        <a href="#service" class="nav-item nav-link" onclick="toggleNavbar()">Serviços</a>
+                        <a href="#portfolio" class="nav-item nav-link" onclick="toggleNavbar()">Portfolio</a>
+                        <a href="#price" class="nav-item nav-link" onclick="toggleNavbar()">Investimento</a>
+                        <a href="#review" class="nav-item nav-link" onclick="toggleNavbar()">Avaliações</a>
                         
                         <a href="https://wa.me/5518996742364?text=" class="nav-item nav-link">Fale conosco</a>
                     </div>
