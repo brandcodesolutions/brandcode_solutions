@@ -1021,6 +1021,8 @@ a:focus {
 
 .price .row {
     padding: 0 15px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
 .price .col-md-4 {
@@ -1055,13 +1057,13 @@ a:focus {
 }
 
 .price .price-title h2 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
 }
 
 .price .price-prices h2 {
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 700;
     margin-left: 10px;
 }
@@ -1127,6 +1129,7 @@ a:focus {
     box-shadow: inset 0 0 0 0 #025DB1;
     border-color: #025DB1;
 }
+
 
 
 /*******************************/
